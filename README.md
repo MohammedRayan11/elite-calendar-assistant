@@ -30,13 +30,6 @@ Your AI-powered scheduling companion — built with FastAPI, Streamlit, LangChai
 
 ---
 
-## 📸 Screenshots
-
-> ✅ Chat interface with Streamlit  
-> ✅ Availability & time slot suggestions  
-> ✅ Booking confirmation message  
-
-_📸 Include screenshots or a Loom video here if needed_
 
 ---
 
