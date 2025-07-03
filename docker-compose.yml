@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      target: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./.env:/app/.env
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile    # ✅ This line fixes the issue
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - PYTHONPATH=/app
